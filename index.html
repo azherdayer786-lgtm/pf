@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Mohammed Shahid Dayer</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* ===== GLOBAL BODY ===== */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-link {
+            color: #fff !important;
+          
+        }
+
+        .navbar .nav-link:hover {
+            color: #dc3545 !important;
+        }
+
+        /* ===== HOME SECTION ===== */
+        #home {
+            min-height: 100vh;
+            background:fff;
+            display: flex;
+            background: linear-gradient(135deg, #ff0000, #000000);
+            color:#fff;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        #home p {
+            font-size: 22px;
+        }
+
+        /* ===== SECTION HEADINGS ===== */
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: #dc3545;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-box {
+            background-color: #f8f9fa;
+            padding-top: 60px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-box img {
+            border: 4px solid #dc3545;
+        }
+
+        /* ===== EDUCATION ===== */
+        .education-section {
+           padding-top: 60px;
+        padding-bottom: 30px;
+           
+        
+        }
+
+        .edu-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            height: 100%;
+        }
+
+        .edu-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .edu-card .text-box {
+            padding: 20px;
+            color: #000;
+        }
+
+        /* ===== SKILLS SECTION ===== */
+        .skills-section {
+            padding-top: 60px;
+               padding-bottom: 30px;
+          
+           
+            background-color: #ffffff;
+        }
+
+        .skill-icon {
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            transition: 0.3s ease;
+        }
+
+        .skill-icon:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(220, 53, 69, 0.4);
+        }
+
+        .skill-icon img {
+            max-width: 70px;
+            margin: auto;
+        }
+
+        /* ===== HOBBIES ===== */
+        .hobbies-section {
+            padding-top: 60px;
+          
+        }
+
+        .hobby-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            height: 100%;
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .hobby-card .text-box {
+            padding: 20px;
+            color: #000;
+        }
+
+        .hobby-card h3 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+
+        /* ===== DIVIDER ===== */
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #dc3545, transparent);
+            margin: 80px auto;
+        }
+
+        /* ===== PROJECTS ===== */
+        .projects-section {
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(220, 53, 69, 0.4);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-card h5,
+        .project-card p {
+            color: #000 !important;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-box {
+            background-color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            padding: 40px 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #f8f9fa !important;
+            color: #000 !important;
+        }
+
+        footer a {
+            color: #dc3545;
+        }
+
+        footer a:hover {
+            color: #000;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="Navbar" >
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hobbies">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+        <h1>MOHAMMED SHAHID DAYER</h1>
+        <p>Web Developer | MCA Student | Programmer</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center about-box rounded p-4">
+
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="images/prof.png"
+                    alt="Shahid Dayer" 
+                    class="img-fluid rounded-circle about-img">
+                </div>
+
+                <div class="col-md-8 text-center text-md-start">
+                    <h3 class="mb-4"><b>ABOUT ME</b></h3>
+                    <p><b> I am MOHAMMED SHAHID DAYER</b></p>
+                    <p><b>I am Purcassing MCA  at Star Infotech College</b></p>
+                    <p><b>Name:</b> MD. Shahid Dayer</p>
+                    <p><b>Email:</b> sahiddayer6@gmail.com</p>
+                    <p><b>Phone:</b> +91 7976971733</p>
+                    <p><b>Address:</b> Subhas Nagar, Bhilwara</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+    <div class="container">
+        <h3 class="text-center mb-4 mt-0"><b>EDUCATION</b></h3>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="edu-card">
+                    <img src="images/gre.cap.jpg" alt="Graduation">
+                    <div class="text-box">
+                        <h4><b>GRADUATION</b></h4>
+                        <p>Completed BA (2025).</p>
+                        <p>Pursuing MCA at Star Infotech College.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="edu-card">
+                    <img src="images/sangam1.jpg" alt="12th">
+                    <div class="text-box">
+                        <h4><b>12th</b></h4>
+                        <p>Completed in 2021-22 at Sangam University Bhilwara.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="edu-card">
+                    <img src="images/st.paul.jpeg" alt="10th">
+                    <div class="text-box">
+                        <h4><b>10th</b></h4>
+                        <p>Completed in 2020-21 at Saint Paul School.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+
+            <h2 class="text-center mb-5"><b>SKILLS</b></h2>
+
+            <div class="row text-center g-4">
+
+                <div class="col-6 col-md-3">
+                    <div class="skill-icon bg-white p-5">
+                        <img src="images/html.png">
+                        <p class="mt-3"><b>HTML</b></p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="skill-icon bg-white p-5">
+                        <img src="images/css-3_5968201.png">
+                        <p class="mt-3"><b>CSS</b></p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="skill-icon bg-white p-5">
+                        <img src="images/c_5296954.png">
+                        <p class="mt-3"><b>CLang</b></p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="skill-icon bg-white p-5">
+                        <img src="images/bootstrap_5968680.png">
+                        <p class="mt-3"><b>Bootstrap</b></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="hobbies-section">
+        <div class="container">
+            <h3 class="text-center mb-4"><b>HOBBIES</b></h3>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4">
+                    <div class="hobby-card">
+                        <img src="images/Gaming.jpg" alt="Gaming">
+                        <div class="text-box">
+                            <h3><b>GAMING</b></h3>
+                            <p>I enjoy online action and strategy games that improve focus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="hobby-card">
+                        <img src="images/Bike Ride.jpg" alt="Bike Riding">
+                        <div class="text-box">
+                            <h3><b>BIKE RIDING</b></h3>
+                            <p>I love long rides and exploring new places.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="hobby-card">
+                        <img src="images/Sports1.jpg" alt="Sports">
+                        <div class="text-box">
+                            <h3><b>SPORTS</b></h3>
+                            <p>Playing Volleyball & Cricket keeps me fit and energetic.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="section-divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+
+            <h3 class="text-center mb-4"><b>PROJECTS</b></h3>
+
+            <div class="row g-5 justify-content-center">
+
+                <div class="col-md-5">
+                    <div class="project-card">
+                        <img src="images/SHAHID'BIKE.jpg" alt="Bike Project">
+                        <div class="p-4">
+                            <h5><b>Bike Showroom Website</b></h5>
+                            <p>A complete bike showroom website.</p>
+                            <a href="https://azherdayer786-lgtm.github.io/bike/" target="_blank" class="btn btn-danger">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="project-card">
+                        <img src="images/Shahid's cafe.jpg" alt="Café Project">
+                        <div class="p-4">
+                            <h5><b>Shahid's Café</b></h5>
+                            <p>A responsive café website.</p>
+                            <a href="https://azherdayer786-lgtm.github.io/coffee/" target="_blank" class="btn btn-danger">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+        <div class="contact-box">
+            <h3 class="text-center mb-4"><b>CONTACT</b></h3>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <input type="text" class="form-control p-3" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control p-3" placeholder="Last Name">
+                    </div>
+                </div>
+                <input type="tel" class="form-control p-3 mb-3" placeholder="Phone Number">
+                <input type="email" class="form-control p-3 mb-4" placeholder="Email">
+                <button class="btn btn-danger w-100 py-3"><b>Submit</b></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 mt-5 text-center">
+        <div class="container">
+            <h4 class="mb-2"><b>MOHAMMED SHAHID DAYER</b></h4>
+            <p>Web Developer | MCA Student | Programmer</p>
+            <div class="mt-3">
+                <a href="#" class="me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-3 fs-4"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3 fs-4"><i class="fab fa-github"></i></a>
+                <a href="#" class="fs-4"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <hr class="border-secondary mt-4">
+            <p class="mt-3 mb-0">© 2025 Shahid Dayer | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        $('.js-scroll-trigger').click(function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+
+</body>
+
+</html>
